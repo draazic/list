@@ -1,0 +1,21 @@
+
+<h2 style="text-align:center">La liste des products</h2>
+
+<ul class="list-group" style="width: 75%;margin: auto">
+    <li class="list-group-item" *ngFor="let product of products$">
+      <div style="float: left;">
+        <p >
+          {{product.id}}.
+          {{product.title}}
+        </p>
+      </div>
+      <div style="margin-left: 85%" >        
+        <button type="button" class="btn btn-danger"
+        [class.selected]="product.id === selectedId" 
+        [routerLink]="['/product/', product.id]" >Détail</button>
+      </div>
+        
+        
+        
+    </li>
+  </ul>
